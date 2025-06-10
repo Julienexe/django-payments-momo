@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'payments',
     'payments_momo',
+    'test_payments',
 ]
 
 MIDDLEWARE = [
