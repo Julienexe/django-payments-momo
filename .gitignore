@@ -55,7 +55,9 @@ cover/
 *.mo
 *.pot
 
-# Django stuff:
+# Django stuff:\
+*migrations/
+#   Ignore migrations, but not the directory itself, so that new migrations can be created.
 *.log
 local_settings.py
 db.sqlite3
