@@ -135,3 +135,5 @@ PAYMENT_HOST = 'localhost:8000'
 # Whether to use TLS (HTTPS). If false, will use plain-text HTTP.
 # Defaults to ``not settings.DEBUG``.
 PAYMENT_USES_SSL = False
+
+PAYMENT_MODEL = 'test_payments.models.MomoPayment'
