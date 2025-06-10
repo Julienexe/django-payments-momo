@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'payments',
+    'payments_momo',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +122,15 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# This can be a string or callable, and should return a base host that
+# will be used when receiving callbacks and notifications from payment
+# providers.
+#
+# Keep in mind that if you use `localhost`, external servers won't be
+# able to reach you for webhook notifications.
+PAYMENT_HOST = 'localhost:8000'
+
+# Whether to use TLS (HTTPS). If false, will use plain-text HTTP.
+# Defaults to ``not settings.DEBUG``.
+PAYMENT_USES_SSL = False
